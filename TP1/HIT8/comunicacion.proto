@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package p2p;
+
+// El servicio que el Nodo D ofrece
+service RegistroService {
+  // Un nodo C se registra y obtiene la lista de nodos activos
+  rpc RegistrarNodo (SolicitudRegistro) returns (ListaNodos) {}
+}
+
+// Mensaje de C hacia D
+message SolicitudRegistro {
+  string ip = 1;
+  int32 puerto = 2;
+}
+
+// Estructura de un Nodo individual
+message NodoInfo {
+  string ip = 1;
+  int32 puerto = 2;
+}
+
+// Respuesta de D hacia C (Lista de nodos activos en la ventana actual)
+message ListaNodos {
+  repeated NodoInfo nodos = 1;
+}
+
+// Servicio para saludos entre Nodos C (Opcional, para simetría)
+service SaludoService {
+  rpc EnviarSaludo (MensajeSaludo) returns (Confirmacion) {}
+}
+
+message MensajeSaludo {
+  string emisor = 1;
+  string contenido = 2;
+}
+
+message Confirmacion {
+  string status = 1;
+}
