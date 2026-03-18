@@ -1,0 +1,4 @@
+{"timestamp": "2026-03-18 18:21:00", "evento": "ROTACION_VENTANA", "detalles": {"nueva_ventana_activa": [], "minuto_inicio": "18:21"}}
+{"timestamp": "2026-03-18 18:21:25", "evento": "INSCRIPCION_RECIBIDA", "detalles": {"nodo": {"ip": "127.0.0.1", "puerto": 57232}, "para_minuto": 22}}
+{"timestamp": "2026-03-18 18:22:00", "evento": "ROTACION_VENTANA", "detalles": {"nueva_ventana_activa": [{"ip": "127.0.0.1", "puerto": 57232}], "minuto_inicio": "18:22"}}
+{"timestamp": "2026-03-18 18:22:02", "evento": "INSCRIPCION_RECIBIDA", "detalles": {"nodo": {"ip": "127.0.0.1", "puerto": 53078}, "para_minuto": 23}}
